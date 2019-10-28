@@ -44,7 +44,7 @@ body {
   body iframe {
     max-width: 100%; }
   body nav {
-    font-variant: small-caps; }
+    text-transform: uppercase; }
   body h1,
   body h2,
   body h3 {
@@ -52,7 +52,7 @@ body {
     padding: 1em 0;
     line-height: 1.25;
     font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
-    font-variant-caps: small-caps; }
+    text-transform: uppercase; }
   body h1,
   body h2 {
     font-weight: 900; }
@@ -101,7 +101,8 @@ body {
   height: 3.5em;
   background-color: white;
   z-index: 11;
-  box-shadow: 0 1px 2px rgba(40, 57, 83, 0.9); }
+  box-shadow: 0 1px 2px rgba(40, 57, 83, 0.9);
+  font-size: 0.8em; }
   .navigation > button:focus {
     outline: 1px dotted #bb0000; }
 
@@ -342,7 +343,7 @@ body {
 
 .drop-down-list-link {
   padding: .5em 6%;
-  border-bottom: 0.05em solid #fff5f0;
+  border-bottom: 0.05em solid #cacaca;
   position: relative; }
   @media (min-width: 48em) {
     .drop-down-list-link {
@@ -441,7 +442,6 @@ body {
   .hero-text .h1-subtext {
     font-size: 1.2em;
     line-height: 1.125;
-    font-variant: small-caps;
     position: relative;
     font-weight: 500;
     padding: 0; }
@@ -455,7 +455,7 @@ body {
     margin: 2em 0 .5em 0;
     padding: .15em 1.5em;
     font-size: 1.3em;
-    font-variant: small-caps;
+    text-transform: uppercase;
     background-color: transparent;
     color: #bb0000;
     border: 0.1em solid #bb0000;
@@ -509,7 +509,7 @@ body {
         width: 45%; } }
     .main-wrapper header .heading {
       font-size: 3em;
-      font-variant: small-caps;
+      text-transform: uppercase;
       position: relative;
       padding-top: 0;
       color: #bb0000; }
@@ -681,8 +681,7 @@ body {
   color: white;
   font-size: 1.2em;
   line-height: 1.05;
-  font-weight: 700;
-  font-variant: small-caps; }
+  font-weight: 700; }
 
 .card-panel-produkty > .container {
   padding-bottom: 8em; }
@@ -691,7 +690,7 @@ body {
     text-align: center; }
     .card-panel-produkty > .container header .heading {
       font-size: 2.5em;
-      font-variant: small-caps;
+      text-transform: uppercase;
       position: relative;
       padding-top: .5em; }
       .card-panel-produkty > .container header .heading:before {
@@ -904,9 +903,12 @@ body {
   padding: .5em;
   background-color: rgba(41, 77, 131, 0.9);
   border-left: 0.5em solid #bb0000;
-  font-variant: small-caps;
+  text-transform: uppercase;
   font-size: 1em;
   justify-self: flex-start; }
+  @media (min-width: 64em) {
+    .overlay-card-heading {
+      font-size: 0.8em; } }
 
 .overlay-card-paragraph {
   background-color: rgba(41, 77, 131, 0.9);
@@ -953,7 +955,7 @@ body {
   padding-bottom: 5em; }
   .slanted-panel-text .heading {
     font-size: 2.5em;
-    font-variant: small-caps;
+    text-transform: uppercase;
     position: relative;
     padding-top: .5em;
     margin: 0 4%; }
@@ -1098,7 +1100,7 @@ body {
   background-color: rgba(255, 255, 255, 0.5); }
   .gallery .heading {
     font-size: 2.5em;
-    font-variant: small-caps;
+    text-transform: uppercase;
     position: relative;
     padding-top: .5em;
     margin: 0 4%; }
@@ -1378,7 +1380,7 @@ body {
   .where-we-work .heading {
     font-size: 2.5em;
     line-height: 0.9;
-    font-variant: small-caps;
+    text-transform: uppercase;
     position: relative;
     padding-top: .5em;
     margin: 0 4%;
@@ -1540,7 +1542,7 @@ body {
   .callout-panel .large-text {
     font-size: 1.5em;
     line-height: 1.2;
-    font-variant: small-caps;
+    text-transform: uppercase;
     font-weight: 900; }
   .callout-panel .callout-logo {
     width: 60%;
@@ -1599,18 +1601,22 @@ footer {
     font-size: 0.8em;
     line-height: 1.2;
     white-space: pre-wrap; }
+    .footer-navigation-list a:hover {
+      color: white; }
 
 .footer-navigation-list-link {
   -webkit-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: inline-block;
-  padding: .1em .5em; }
+  padding: .1em .5em;
+  margin-bottom: .5em; }
   .footer-navigation-list-link .footer-navigation-sublist {
-    padding-top: .5em; }
+    padding-top: .15em; }
   @media (min-width: 48em) {
     .footer-navigation-list-link {
-      width: 19%; } }
+      width: 19%;
+      margin-bottom: 0; } }
 
 .footer-navigation-list-link > strong {
   font-size: 1em; }
@@ -1642,6 +1648,13 @@ footer {
   .footer-contact-email > a {
     display: inline-block;
     color: white; }
+  @media (min-width: 48em) {
+    .footer-contact-address,
+    .footer-contact-phone,
+    .footer-contact-email {
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start; } }
 
 .footer-contact-address {
   padding-bottom: 1em;
@@ -1663,7 +1676,7 @@ footer {
   font-size: 0.7em; }
 
 .subpage-banner {
-  min-height: 100vh;
+  min-height: 80vh;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1720,11 +1733,11 @@ footer {
   z-index: 2; }
 
 .subpage-banner-h1 {
-  font-size: 2em;
+  font-size: 1.6em;
   line-height: 1.05; }
   @media (min-width: 25em) {
     .subpage-banner-h1 {
-      font-size: 3em; } }
+      font-size: 2.3em; } }
 
 .subpage-banner-h1 {
   margin: .15em auto;
@@ -1746,9 +1759,9 @@ footer {
   position: absolute;
   bottom: 0;
   right: 0;
-  font-size: 1.4em;
+  font-size: 1.2em;
   line-height: 1.05;
-  font-variant: small-caps; }
+  text-transform: uppercase; }
 
 .subpage-banner-link {
   display: block;
@@ -1801,20 +1814,22 @@ footer {
   width: 100%;
   padding: .5em 0;
   margin: 0;
-  text-align: center; }
+  text-align: center;
+  font-size: 1.3em; }
   @media (min-width: 48em) {
     .two-part-panel-heading {
       text-align: left; } }
 
 .two-part-panel-image,
 .two-part-panel-text {
-  padding: 0 1em;
+  padding: .5em 1em;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
   .two-part-panel-image > h3,
   .two-part-panel-text > h3 {
-    padding: 0;
-    margin: 0; }
+    padding: .25em 0;
+    margin: 0;
+    font-size: 1em; }
 
 .two-part-panel-image {
   height: 15em;
@@ -1921,9 +1936,9 @@ footer {
   text-align: center;
   color: #bb0000;
   font-weight: 900;
-  font-size: 1.2em;
-  line-height: 0.9;
-  font-variant: small-caps;
+  font-size: 1em;
+  line-height: 1.2;
+  text-transform: uppercase;
   display: flex;
   align-items: center;
   justify-content: center; }
